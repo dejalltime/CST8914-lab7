@@ -24,9 +24,12 @@ body {
 a{
   color: #006b3a;
 }
-main a{
+
+/* Removed the outline none */
+/* main a{
   outline: none;
-}
+} */
+
 h2 {
   margin-top: 0;
 }
@@ -68,8 +71,9 @@ header {
 }
 
 .menu a {
-  color: #000;
-  text-decoration: none;
+  /* Removed color and text decorations */
+  /* color: #000;
+  text-decoration: none; */
   font-size: 18px;
   margin-right: 18px;
 }
@@ -206,7 +210,8 @@ article p {
       <nav class="menu">
         <a href="#">Home</a>
         <a href="#">Politics</a>
-        <a href="#" tabindex="-1">Business</a>
+        <!-- Removed tabinded="-1" -->
+        <a href="#">Business</a> 
         <a href="#">Entertainment</a>
         <a href="#">Sports</a>
         <a href="#" class="btn-search pull-right"><img src="https://raw.githubusercontent.com/udacity/ud891/2de2a0688c68809a3b453db3a24b1a59e8401459/lesson2-focus/02-dom-order/images/search.svg" alt="Search" />Search</a> 
@@ -214,14 +219,7 @@ article p {
       </nav>
     </div>
   </header>
-  <div class="newsletter">
-    <div class="container">
-      <h3>Like the Funion? Consider joining our newsletter!</h3>
-      <input type="text">
-      <button type="button" onfocus="getFocus()">Sign up</button></div>
-      
-    </div>
-  </div>
+  <!-- Removed the newsletter div from here -->
   <main class="container">
     <h2 class="offscreen">Top story</h2>
     <article class="main-story">
@@ -243,7 +241,8 @@ article p {
         </div>
         <article>
           <h3 class="headline">Bee wonders if maybe everyone else is a drone and he's the only one who has it "figured out."</h3>
-          <p><a href="#" tabindex="1"><b>Read More</b></a></p>
+          <!-- Removed tabindex="1" -->
+          <p><a href="#"><b>Read More</b></a></p>
           <img src="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/02-dom-order/images/bee.jpg?raw=true" alt="A bee on top of a flower" />
         </article>
       </div>
@@ -286,14 +285,20 @@ article p {
     </div>
     
   </main>
-  <!--   stuff can be added here :)
-  <footer>
+  <!--   stuff can be added here :) -->
+  <footer class="newsletter">
+    <div class="container">
+      <!-- Changed h3 to label and associate it with input -->
+      <label for="newsletter-email">Like the Funion? Consider joining our newsletter!</label>
+      <input type="email" id="newsletter-email">
+      <button type="button" onclick="getFocus()">Sign up</button></div>
+    </div>
   </footer>
-  -->
+  
   
   <script>
     function getFocus() {
-      window.open('https://aidaform.com/templates/thank-you-page-with-redirects.html','mywindow').focus()
+      window.open('https://aidaform.com/templates/thank-you-page-with-redirects.html','mywindow')
     }
     </script>
 </body>
